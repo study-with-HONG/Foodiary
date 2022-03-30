@@ -5,6 +5,32 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/color1"
         tools:context=".HomeActivity">
-
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/homeCalendar"
+            app:mcv_selectionColor="@color/color3"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp">
+    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+    <Button
+            android:id="@+id/insertMove"
+            android:text="+" android:textSize="30sp"
+            android:background="#00ff0000"
+            android:textColor="@color/color4"
+            android:layout_width="50dp" android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="160dp"
+            android:layout_marginTop="3dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/foodList"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeCalendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-20dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/app/Foodiary/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/app/Foodiary/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/app/Foodiary/app/src/main/res/layout/activity_insert.xml" value="0.209375" />
+        <entry key="..\:/app/Foodiary/app/src/main/res/layout/activity_list_detail.xml" value="0.20989583333333334" />
         <entry key="..\:/app/Foodiary/app/src/main/res/layout/activity_main.xml" value="0.2226762002042901" />
+        <entry key="..\:/app/Foodiary/app/src/main/res/layout/recycle_layout.xml" value="0.15416666666666667" />
       </map>
     </option>
   </component>

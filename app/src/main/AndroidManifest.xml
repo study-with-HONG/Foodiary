@@ -14,6 +14,12 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Foodiary">
         <activity
+                android:name=".ListDetailActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".InsertActivity"
+                android:exported="true"/>
+        <activity
                 android:name=".HomeActivity"
                 android:exported="true"/>
         <activity

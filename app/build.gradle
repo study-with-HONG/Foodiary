@@ -32,6 +32,12 @@ android {
 }
 
 dependencies {
+    // MaterialCalendarView
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3' // 추가
+    // recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'           // 추가
+    implementation 'com.github.bumptech.glide:glide:4.11.0'             // 추가
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'     // 추가
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'

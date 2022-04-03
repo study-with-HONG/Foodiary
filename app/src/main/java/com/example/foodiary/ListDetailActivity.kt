@@ -91,7 +91,7 @@ class ListDetailActivity : AppCompatActivity() {
             dbh.delete(data)
 
             Toast.makeText(this.applicationContext, "삭제완료", Toast.LENGTH_SHORT).show()
-            val itt = Intent(this, HomeActivity::class.java)
+            val itt = Intent(this, MainActivity::class.java)
             startActivity(itt)
         }
         // 데이터 수정
@@ -104,7 +104,7 @@ class ListDetailActivity : AppCompatActivity() {
             dbh.update(data)
 
             Toast.makeText(this.applicationContext, "수정완료", Toast.LENGTH_SHORT).show()
-            val itt = Intent(this, HomeActivity::class.java)
+            val itt = Intent(this, MainActivity::class.java)
             startActivity(itt)
         }
     }

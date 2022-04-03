@@ -106,7 +106,7 @@ class InsertActivity : AppCompatActivity() {
             val dbh =  DBHelper.getInstance(this, "foodata.db")
             dbh.insert(data)
             Toast.makeText(this.applicationContext, "저장완료", Toast.LENGTH_SHORT).show()
-            val moveHome = Intent(this, HomeActivity::class.java)
+            val moveHome = Intent(this, MainActivity::class.java)
             startActivity(moveHome)
 //                }
 //            }, 10000)

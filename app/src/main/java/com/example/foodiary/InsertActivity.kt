@@ -52,17 +52,24 @@ class InsertActivity : AppCompatActivity() {
         }
 
         // 날짜 선택
-        var setYear = Calendar.getInstance().get(Calendar.YEAR)
-        var setMonth = Calendar.getInstance().get(Calendar.MONTH)
-        var setDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
 
         var dateView = findViewById<TextView>(R.id.insertDateView)
-        var dateBtn = findViewById<ImageButton>(R.id.insertDateBtn)
 
+        val getDate = intent.getStringExtra("clickdata")
+        dateView.text = getDate.toString()
+        println("!!!!!!!!!! 넘겨 받은 후 : $getDate")
+
+        // DatePickerDialog 기본 값 세팅
+        var setYear = getDate?.substring(0, 4)!!.toInt()
+        var setMonth = getDate?.substring(5, 7)!!.toInt()
+        var setDay = getDate?.substring(8)!!.toInt()
+        println("!!!!!!!!!! 날짜세팅 : $setYear $setMonth $setDay")
+
+        var dateBtn = findViewById<ImageButton>(R.id.insertDateBtn)
         dateBtn.setOnClickListener{
             val datePickerDialog = DatePickerDialog(this, {_, year, month, day ->
                 dateView.text = "${year.toString()}/${(month+1).toString()}/${day.toString()}"
-            }, setYear, setMonth, setDay)
+            }, setYear, setMonth-1, setDay)
             datePickerDialog.show()
         }
 
@@ -96,7 +103,7 @@ class InsertActivity : AppCompatActivity() {
         val save = findViewById<Button>(R.id.saveBtn)
         save.setOnClickListener{
             // 데이터 추가
-            val data = dataDto(0, path.toString(), dateView.text.toString(), category, menu.text.toString())
+            val data = dataDto(0, path, dateView.text.toString(), category, menu.text.toString())
             println("확인!!!!!!!!!! db저장 : ${data.path} ${data.date}  ${data.category}  ${data.menu}")
 
             // Log 확인용 딜레이

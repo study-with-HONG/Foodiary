@@ -50,7 +50,7 @@ class ListDetailActivity : AppCompatActivity() {
         }
         // 데이터 불러오기
         val dto = intent.getParcelableExtra<dataDto>("data")
-        println("dto:${dto?.path}")
+        println("!!!!!!!!!! path:${dto?.path} date:${dto?.date}")
 
         val dImage = findViewById<ImageView>(R.id.detailImg)
         val dDateView = findViewById<TextView>(R.id.detailDateView)

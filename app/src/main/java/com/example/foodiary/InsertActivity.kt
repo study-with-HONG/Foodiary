@@ -52,7 +52,6 @@ class InsertActivity : AppCompatActivity() {
         }
 
         // 날짜 선택
-
         var dateView = findViewById<TextView>(R.id.insertDateView)
 
         val getDate = intent.getStringExtra("clickdata")
@@ -72,6 +71,7 @@ class InsertActivity : AppCompatActivity() {
             }, setYear, setMonth-1, setDay)
             datePickerDialog.show()
         }
+
 
         // 카테고리 선택
         var radio = findViewById<RadioGroup>(R.id.insertRG)

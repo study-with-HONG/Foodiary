@@ -12,29 +12,52 @@
             android:id="@+id/homeCalendar"
             app:mcv_selectionColor="@color/color3"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="10dp">
-    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
-    <Button
-            android:id="@+id/insertMove"
-            android:text="+" android:textSize="30sp"
-            android:background="#00ff0000"
-            android:textColor="@color/color4"
-            android:layout_width="50dp" android:layout_height="50dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="160dp"
-            android:layout_marginTop="3dp"/>
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/foodList"
-            android:background="@drawable/border_line"
             android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintTop_toTopOf="parent">
+    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/border_line"
             android:layout_width="0dp"
-            app:layout_constraintHeight_percent="0.5"
-            app:layout_constraintWidth_percent="0.9"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.95"
+            app:layout_constraintHeight_percent="0.55"
             app:layout_constraintTop_toBottomOf="@+id/homeCalendar"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="-30dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="-50dp">
+        <Button
+                android:id="@+id/insertMove"
+                android:text="추가" android:textSize="20sp"
+                android:background="#00ff0000" android:textColor="@color/color4"
+                android:layout_width="0dp" android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.2"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"/>
+        <Button
+                android:id="@+id/updateMove"
+                android:text="수정" android:textSize="20sp"
+                android:background="#00ff0000" android:textColor="@color/color4"
+                android:layout_width="0dp" android:layout_height="0dp"
+                app:layout_constraintWidth_percent="0.2"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toEndOf="@+id/insertMove"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/insertMove"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/foodList"
+                android:background="@drawable/border_line"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:layout_constraintHeight_percent="0.8"
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insertMove"
+                android:layout_marginTop="20dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
